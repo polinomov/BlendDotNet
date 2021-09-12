@@ -1,5 +1,12 @@
 <Project Sdk="Microsoft.NET.Sdk">
     <PropertyGroup>
         <TargetFramework>net472</TargetFramework>
-     </PropertyGroup> 
+     </PropertyGroup>
+  <Target Name="CustomAfterBuild" AfterTargets="Build">
+    <Message Text="===copy==== $(TargetPath) to $(SolutionDir)" Importance="high"/>
+    <Copy
+            SourceFiles="$(TargetPath)"
+            DestinationFolder="$(SolutionDir)..\test-in"
+     />
+  </Target>
 </Project>

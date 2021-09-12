@@ -1,8 +1,15 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
     <PropertyGroup>
         <TargetFramework>net472</TargetFramework>
      </PropertyGroup>
     <ItemGroup>
       <ProjectReference Include="..\libb\libb.csproj" />
-    </ItemGroup> 
+    </ItemGroup>
+  <Target Name="CustomAfterBuild" AfterTargets="Build">
+    <Message Text="===copy==== $(TargetPath) to $(SolutionDir)" Importance="high"/>
+    <Copy
+            SourceFiles="$(TargetPath)"
+            DestinationFolder="$(SolutionDir)..\test-in"
+     />
+  </Target>
 </Project>
