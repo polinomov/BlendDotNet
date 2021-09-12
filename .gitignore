@@ -31,5 +31,6 @@ x64/
 *.log
 *.scc
 *.exe
+*.dll
 
 .vs/
