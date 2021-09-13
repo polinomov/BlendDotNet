@@ -9,5 +9,12 @@
       <Reference Include="liba">
         <HintPath>..\liba\obj\Debug\net472\liba.dll</HintPath>
       </Reference>
-    </ItemGroup> 
+    </ItemGroup>
+  <Target Name="CustomAfterBuild" AfterTargets="Build">
+    <Message Text="===copy==== $(TargetPath) to $(SolutionDir)..\result" Importance="high"/>
+    <Copy
+            SourceFiles="$(TargetPath)"
+            DestinationFolder="$(SolutionDir)..\result"
+     />
+  </Target>
 </Project>

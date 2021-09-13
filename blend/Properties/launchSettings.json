@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "blend": {
+      "commandName": "Project",
+      "commandLineArgs": "$(SolutionDir)..\\test-in\\liba.dll $(SolutionDir)..\\test-in\\libb.dll $(SolutionDir)..\\result\\liba.dll"
+    }
+  }
+}
