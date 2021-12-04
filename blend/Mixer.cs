@@ -66,7 +66,7 @@ namespace blend
                 }
                 else
                 {
-                    Console.WriteLine("Unknown " + tp);
+                    Console.WriteLine("Unknown  operand" + tp);
                 }
            }
             else
